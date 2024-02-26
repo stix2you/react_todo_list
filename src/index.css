@@ -1,13 +1,105 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+:root {
+    --first-background-color: #000;
+    --second-background-color: rgb(63, 19, 59);
+    --heading-text-color: rgb(199, 0, 0);
+    --body-text-color: #6ba9ff;
+    --button-background: #1d778d;
+    --button-text: white;
+    --button-border-color: #6ed3f0;
+    --nav-text-unvisited: #6ba9ff;
+    --nav-text-visited: #6ba9ff;
+    --nav-text-hover: rgb(192, 2, 192);
+    --nav-text-active: rgb(192, 2, 192);
+    --animation-color-one: red;
+    --animation-color-two: orange;
+    --animation-color-three: yellow;
+    --animation-color-four: green;
+    --animation-color-five: blue;
+    --animation-color-six: purple;
+    --font-size-very-large: 36px;
+    --font-size-large: 30px;
+    --font-size-medium: 18px;
+    --font-size-small: 10px;
+    --font-weight-bold: 700;
+    --font-weight-normal: 200;
+  }
+  
+  /* sets all elements to border-box value,
+  which INCLUDES the padding and border
+  when calculating box sizes */
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* set style for body */
+  body {
+    background-color: var(--first-background-color);
+    color: var(--body-text-color);
+    font-family: 'Young Serif', serif;
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-large);
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: var(--font-size-very-large);
+    font-weight: var(--font-weight-bold);
+    color: var(--heading-text-color);
+  }
+  
+  h2 {
+    font-size: var(--font-size-large);
+    font-weight: var(--font-weight-normal);
+    color: var(--heading-text-color);
+  }
+  
+  h3 {
+    font-size: var(--font-size-large);
+    font-weight: var(--font-weight-normal);
+    color: var(--body-text-color);
+  }
+
+   .button,
+  button {
+    /* overwrites browser defaults and resets the border */
+    width: 10rem;
+    border: none;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+  
+    /* takes the font from the outer container */
+    font-family: inherit;
+    font-size: var(--font-size-medium);
+  
+    /* styles the button */
+  
+    background-color: var(--button-background);
+    color: var(--button-text);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 100px;   /* makes the button round */
+  
+    /* width of the border, type, color */
+    border-bottom: 2px solid var(--button-border-color);
+    border-right: 2px solid var(--button-border-color);
+    transition-duration: 0.4s;
+    transition-property: opacity;
+  }
+  
+  button:hover,
+  button:focus,
+  .button:hover,
+  .button:focus {
+    /* lets the mouse appear as a hand when hovering over the button */
+    cursor: pointer;
+  
+    /* reduces the opacity of the button to 80% */
+    opacity: 0.8;
+  }
